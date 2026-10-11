@@ -11,12 +11,7 @@ Base module for **Hydrocarbons-02**, a modular project designed to process molec
 ### Prerequisites
 Ensure you have Java 25 and Maven installed.
 
-### Build 
-To compile the project:
-```bash
-mvn clean package
+Build: Run `mvn clean package`
 
-### Run fatjar 
-To run the fatjar:
-```bash
-java -jar target/chem-1.0-SNAPSHOT.jar
+Run: Run `java -jar target/chem-1.0-SNAPSHOT.jar`
+
