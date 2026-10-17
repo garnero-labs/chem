@@ -9,29 +9,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows  ;
 class ElementTest {
 
     @Test
-
-    public void testBond () {
-
-        Bond b1 = new Bond (1, 100, 200) ;
-        Bond b2 = new Bond (1, 100, 200) ;
-
-        assertNotSame (b1, b2, "not same") ;
-        assertEquals  (b1, b2, "equals"  ) ;
-
-        Bond b3 = b1 ;
-
-        assertEquals (b1, b3, "equals") ;
-        assertSame   (b1, b3, "same"  ) ;
-
-        Bond b4 = b1.copy () ;
-
-        assertEquals  (b1, b4, "equals") ;
-        assertNotSame (b1, b4, "same"  ) ;
-
-    }
-
-
-    @Test
     void testElementByAtomicNumber () {
 
         // Full 118 sequential elements validation order
@@ -166,6 +143,9 @@ class ElementTest {
         // Test invalid range when search by atomic number.
         assertThrows (IllegalArgumentException.class, () -> Element.elementByAtomicNumber (0), "IllegalArgumentException when searching < 1") ;
         assertThrows (IllegalArgumentException.class, () -> Element.elementByAtomicNumber (119), "IllegalArgumentException when searching > 118") ;
+
+        //--- test total # of elements.
+        assertEquals (118, Element.getTotalElements (), "Total # of elements should be 118") ;
     }
 
     @Test

@@ -2,14 +2,35 @@ package com.jorgegarnero.chem ;
 
 import org.junit.jupiter.api.Test ;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNotSame;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals ;
+import static org.junit.jupiter.api.Assertions.assertNotEquals ;
+import static org.junit.jupiter.api.Assertions.assertNotNull ;
+import static org.junit.jupiter.api.Assertions.assertNotSame ;
+import static org.junit.jupiter.api.Assertions.assertSame ;
+import static org.junit.jupiter.api.Assertions.assertTrue ;
 
 class BondTest {
 
+    @Test
+    public void testBond () {
+
+        Bond b1 = new Bond (1, 100, 200) ;
+        Bond b2 = new Bond (1, 100, 200) ;
+
+        assertNotSame (b1, b2, "not same") ;
+        assertEquals  (b1, b2, "equals"  ) ;
+
+        Bond b3 = b1 ;
+
+        assertEquals (b1, b3, "equals") ;
+        assertSame   (b1, b3, "same"  ) ;
+
+        Bond b4 = b1.copy () ;
+
+        assertEquals  (b1, b4, "equals") ;
+        assertNotSame (b1, b4, "same"  ) ;
+
+    }
 
     @Test
     void testBondCreationAndGetters () {
