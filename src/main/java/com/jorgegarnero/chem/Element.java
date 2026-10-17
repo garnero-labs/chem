@@ -1,4 +1,4 @@
-package com.jorgegarnero.chem;
+package com.jorgegarnero.chem ;
 
 public enum Element {
 
@@ -130,7 +130,7 @@ public enum Element {
     private final String    block                   ;
     private final double    standardAtomicWeight    ;
 
-    private static final Element[] VALUES = values();
+    private static final Element[] VALUES = values () ;
 
     Element (String symbol, String name, int group, int period, String block, double standardAtomicWeight) {
         this.symbol       = symbol       ;
@@ -141,7 +141,7 @@ public enum Element {
         this.standardAtomicWeight = standardAtomicWeight ;
     }
 
-    public int      getAtomicNumber         () { return this.ordinal() + 1;             }
+    public int      getAtomicNumber         () { return this.ordinal () + 1              ; }
     public String   getSymbol               () { return symbol                          ; }
     public String   getName                 () { return name                            ; }
     public int      getGroup                () { return group                           ; }
@@ -149,12 +149,12 @@ public enum Element {
     public String   getBlock                () { return block                           ; }
     public double   getStandardAtomicWeight () { return standardAtomicWeight            ; }
 
-    public static int getTotalElements      () { return VALUES.length;                  }
+    public static int getTotalElements      () { return VALUES.length ;                  }
 
     public static Element elementByAtomicNumber (int atomicNumber) {
         if (atomicNumber < 1 || atomicNumber > VALUES.length) {
-            throw new IllegalArgumentException("Element with atomic number " + atomicNumber + " is out of valid range (1-" + VALUES.length + ").");
+            throw new IllegalArgumentException ("Element with atomic number " + atomicNumber + " is out of valid range (1-" + VALUES.length + ").") ;
         }
-        return VALUES[atomicNumber - 1];
+        return VALUES[atomicNumber - 1] ;
     }
 }
