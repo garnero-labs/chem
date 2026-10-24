@@ -2,6 +2,13 @@ package com.jorgegarnero.chem ;
 
 import java.util.Objects ;
 
+/**
+ * A chemical bond between atoms.
+ *
+ * @author Jorge Garnero
+ * @version 1.0
+ */
+
 public class Bond {
 
     private int cardinal ;

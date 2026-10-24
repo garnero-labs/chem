@@ -4,6 +4,12 @@ import java.util.ArrayList ;
 import java.util.List ;
 import java.util.Objects ;
 
+/**
+ * An Atom.
+ *
+ * @author Jorge Garnero
+ * @version 1.0
+ */
 
 public class Atom {
 

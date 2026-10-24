@@ -1,5 +1,12 @@
 package com.jorgegarnero.chem ;
 
+/**
+ * Chemical Elements.
+ *
+ * @author Jorge Garnero
+ * @version 1.0
+ */
+
 public enum Element {
 
     HYDROGEN       (    "H"    ,"Hydrogen"     ,1       ,1  , "s", 1.008)    ,

@@ -6,6 +6,16 @@ import java.util.Objects ;
 import java.util.Set ;
 import java.util.stream.Collectors ;
 
+/**
+ * Represents a Molecule.
+ *
+ * Not null atoms, bonds collections guaranteed.
+ * Getters, Deep copy.
+ *
+ * @author Jorge Garnero
+ * @version 1.0
+ */
+
 public class Molecule {
 
     private static final Set<Element> hydroCarbonElementSet = Set.of (Element.CARBON,

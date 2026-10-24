@@ -2,6 +2,13 @@ package com.jorgegarnero.chem ;
 
 import java.util.Objects ;
 
+/**
+ * A 3D cartesian coordinate.
+ *
+ * @author Jorge Garnero
+ * @version 1.0
+ */
+
 public class Point {
 
     private double x ;
