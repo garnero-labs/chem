@@ -13,10 +13,10 @@ import java.util.Objects ;
 
 public class Atom {
 
-    private int        id       ;
-    private Element    element  ;
-    private Point      position ;
-    private List<Bond> bonds    ;
+    private final int        id       ;
+    private final Element    element  ;
+    private final List<Bond> bonds    ;
+    private       Point      position ;
 
     public Atom (int id, Element element) {
 
@@ -30,13 +30,14 @@ public class Atom {
 
         Atom atom = new Atom (id, element) ;
 
-        if (this.position != null) {
-            atom.setPosition (this.position.copy ()) ;
-        }
+        this.getBonds ().stream ().map (Bond::copy).forEach (atom::addBond) ;
 
-        atom.setBonds (this.getBonds ().stream ().map (Bond::copy).toList ()) ;
+        if (this.position == null)
+            return atom ;
 
+        atom.setPosition (this.position.copy ()) ;
         return atom ;
+
     }
 
     public int        getId       () { return id       ; }
@@ -44,10 +45,13 @@ public class Atom {
     public Point      getPosition () { return position ; }
     public List<Bond> getBonds    () { return bonds    ; }
 
-    public void setId       (int id)           { this.id       = id       ; }
-    public void setElement  (Element element)  { this.element  = element  ; }
     public void setPosition (Point position)   { this.position = position ; }
-    public void setBonds    (List<Bond> bonds) { this.bonds    = bonds    ; }
+
+    public void addBond (Bond bond) {
+        if (bond != null && !bonds.contains (bond)) {
+            bonds.add (bond) ;
+        }
+    }
 
     public String toString () {
 
@@ -66,14 +70,14 @@ public class Atom {
 
         Atom atom = (Atom) o ;
 
-        return id == atom.id && element == atom.element && Objects.equals (position, atom.position) && Objects.equals (bonds, atom.bonds) ;
+        return id == atom.id && element == atom.element  ;
 
     }
 
     @Override
     public int hashCode () {
 
-        return Objects.hash (id, element, position, bonds) ;
+        return Objects.hash (id, element) ;
 
     }
 

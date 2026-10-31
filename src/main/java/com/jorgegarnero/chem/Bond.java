@@ -37,16 +37,6 @@ public class Bond {
         return toAtom   ;
     }
 
-    public void setCardinal (int cardinal) {
-        this.cardinal = cardinal ;
-    }
-    public void setFromAtom (int fromAtom) {
-        this.fromAtom = fromAtom ;
-    }
-    public void setToAtom   (int toAtom  ) {
-        this.toAtom   = toAtom   ;
-    }
-
     @Override
     public String toString () {
         return "Bond{"        +

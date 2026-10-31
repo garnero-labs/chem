@@ -1,7 +1,5 @@
 package com.jorgegarnero.chem ;
 
-import java.util.Objects ;
-
 /**
  * A 3D cartesian coordinate.
  *
@@ -47,26 +45,12 @@ public class Point {
 
     }
 
-
-    @Override
-    public boolean equals (Object o) {
-
-        if (this == o) return true ;
-
-        if (o == null || getClass () != o.getClass ()) return false ;
-
-        Point point = (Point) o ;
-
-        return Double.compare (x, point.x) == 0 && Double.compare (y, point.y) == 0 && Double.compare (z, point.z) == 0 ;
-
-    }
-
-
-    @Override
-    public int hashCode () {
-
-        return Objects.hash (x, y, z) ;
-
-    }
+    /*
+     * We do not have "equals" neither "hash".
+     * Because:
+     *      - we do want to have setters.
+     *      - we do not have orphan hashes.
+     *      - if we need to compare, we can do it "by hand", and with tolerance. (epsilons).
+     */
 
 }

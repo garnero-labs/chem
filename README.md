@@ -15,14 +15,6 @@ Build: Run `mvn clean package`
 
 Run: Run `java -jar target/chem-1.0-SNAPSHOT.jar`
 
-# Chem
-
-Base module for **Hydrocarbons-02**, a modular project designed to process molecular data, handle chemical nomenclature, and render 3D structures.
-
-## Tech Stack
-- **Java 25**
-- **Maven 3.9.9**
-
 ## Architecture & Domain Model
 
 ```mermaid

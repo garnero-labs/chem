@@ -10,7 +10,8 @@ import java.util.stream.Collectors ;
  * Represents a Molecule.
  *
  * Not null atoms, bonds collections guaranteed.
- * Getters, Deep copy.
+ * Setters. Getters, Deep copy.
+ * No equals/hash. If comparisons are needed, we will do it by hand.
  *
  * @author Jorge Garnero
  * @version 1.0

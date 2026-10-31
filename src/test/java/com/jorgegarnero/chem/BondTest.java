@@ -42,19 +42,6 @@ class BondTest {
     }
 
     @Test
-    void testBondSetters () {
-        Bond bond = new Bond (1, 0, 1) ;
-
-        bond.setCardinal (2) ;
-        bond.setFromAtom (2) ;
-        bond.setToAtom   (3) ;
-
-        assertEquals (2, bond.getCardinal ()) ;
-        assertEquals (2, bond.getFromAtom ()) ;
-        assertEquals (3, bond.getToAtom   ()) ;
-    }
-
-    @Test
     void testBondCopy () {
         Bond original = new Bond (3, 1, 4) ;
         Bond copy = original.copy () ;

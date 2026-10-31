@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.* ;
 import java.util.List ;
 import java.util.Set ;
 
-class MoleculeTest {
+class Molecule2Test {
 
     @Test
     void testDefaultConstructor () {
@@ -163,6 +163,7 @@ class MoleculeTest {
         mol.setAtoms (List.of (new Atom (1, Element.CARBON))) ;
         mol.setBonds (List.of (new Bond (1, 100, 200))) ;
 
+        //--- check
         assertNotNull (mol.getAtoms (), "Atoms not null") ;
         assertFalse (mol.getAtoms ().isEmpty (), "Atoms not empty") ;
 
