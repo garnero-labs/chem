@@ -1,9 +1,9 @@
 package com.jorgegarnero.chem ;
 
+import java.util.Optional ;
 import org.junit.jupiter.api.Test ;
-import static org.junit.jupiter.api.Assertions.assertNotSame ;
 import static org.junit.jupiter.api.Assertions.assertEquals  ;
-import static org.junit.jupiter.api.Assertions.assertSame    ;
+import static org.junit.jupiter.api.Assertions.assertTrue    ;
 import static org.junit.jupiter.api.Assertions.assertThrows  ;
 
 class ElementTest {
@@ -199,5 +199,21 @@ class ElementTest {
         assertEquals (7, og.getPeriod (), "Period de Oganesson must be 7") ;
         assertEquals ("p", og.getBlock (), "Block de Oganesson must be p") ;
         assertEquals (294.00, og.getStandardAtomicWeight (), "StandardAtomicWeight de Oganesson must be 294.00") ;
+    }
+
+    @Test
+    void fromSymbolHandlesNullBlankAndUnknownInputs () {
+        assertTrue (Element.fromSymbol (null).isEmpty ()) ;
+        assertTrue (Element.fromSymbol ("").isEmpty ()) ;
+        assertTrue (Element.fromSymbol ("   ").isEmpty ()) ;
+        assertTrue (Element.fromSymbol ("Xx").isEmpty ()) ;
+    }
+
+    @Test
+    void fromSymbolMatchesCaseInsensitiveAndTrimmedSymbols () {
+        assertEquals (Optional.of (Element.CARBON),   Element.fromSymbol ("C")) ;
+        assertEquals (Optional.of (Element.CARBON),   Element.fromSymbol ("  c  ")) ;
+        assertEquals (Optional.of (Element.NITROGEN), Element.fromSymbol ("n")) ;
+        assertEquals (Optional.of (Element.OXYGEN),   Element.fromSymbol (" O ")) ;
     }
 }

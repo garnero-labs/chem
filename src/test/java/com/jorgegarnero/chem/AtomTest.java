@@ -2,7 +2,7 @@ package com.jorgegarnero.chem ;
 
 import org.junit.jupiter.api.Test ;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertFalse ;
 import static org.junit.jupiter.api.Assertions.assertNotSame ;
 import static org.junit.jupiter.api.Assertions.assertEquals  ;
 import static org.junit.jupiter.api.Assertions.assertNotNull ;
@@ -61,7 +61,7 @@ class AtomTest {
     void testAtomCopy () {
         Atom original = new Atom (1, Element.CARBON) ;
         original.setPosition (new Point (1.1, 2.2, 3.3)) ;
-        original.addBond (new Bond (1, 1, 6));
+        original.addBond (new Bond (1, 1, 6)) ;
 
         Atom copy = original.copy () ;
 

@@ -1,0 +1,145 @@
+{
+  "metadata": {
+    "cid": 640308,
+    "molecularFormula": "C5H5NO",
+    "iupacName": "1H-pyrrole-3-carbaldehyde",
+    "has3d": true
+  },
+  "dimension": "2D",
+  "atoms": [
+    {
+      "aid": 1,
+      "element": "O",
+      "x": 3.4901,
+      "y": 1.9407
+    },
+    {
+      "aid": 2,
+      "element": "N",
+      "x": 2.809,
+      "y": -1.3207
+    },
+    {
+      "aid": 3,
+      "element": "C",
+      "x": 3.309,
+      "y": 0.2181
+    },
+    {
+      "aid": 4,
+      "element": "C",
+      "x": 3.618,
+      "y": -0.7329
+    },
+    {
+      "aid": 5,
+      "element": "C",
+      "x": 2.309,
+      "y": 0.2181
+    },
+    {
+      "aid": 6,
+      "element": "C",
+      "x": 2.0,
+      "y": -0.7329
+    },
+    {
+      "aid": 7,
+      "element": "C",
+      "x": 3.8968,
+      "y": 1.0272
+    },
+    {
+      "aid": 8,
+      "element": "H",
+      "x": 4.2077,
+      "y": -0.9245
+    },
+    {
+      "aid": 9,
+      "element": "H",
+      "x": 1.9446,
+      "y": 0.7197
+    },
+    {
+      "aid": 10,
+      "element": "H",
+      "x": 2.809,
+      "y": -1.9407
+    },
+    {
+      "aid": 11,
+      "element": "H",
+      "x": 1.4103,
+      "y": -0.9245
+    },
+    {
+      "aid": 12,
+      "element": "H",
+      "x": 4.5134,
+      "y": 0.9623
+    }
+  ],
+  "bonds": [
+    {
+      "aid1": 1,
+      "aid2": 7,
+      "order": 2
+    },
+    {
+      "aid1": 2,
+      "aid2": 4,
+      "order": 1
+    },
+    {
+      "aid1": 2,
+      "aid2": 6,
+      "order": 1
+    },
+    {
+      "aid1": 2,
+      "aid2": 10,
+      "order": 1
+    },
+    {
+      "aid1": 3,
+      "aid2": 4,
+      "order": 2
+    },
+    {
+      "aid1": 3,
+      "aid2": 5,
+      "order": 1
+    },
+    {
+      "aid1": 3,
+      "aid2": 7,
+      "order": 1
+    },
+    {
+      "aid1": 4,
+      "aid2": 8,
+      "order": 1
+    },
+    {
+      "aid1": 5,
+      "aid2": 6,
+      "order": 2
+    },
+    {
+      "aid1": 5,
+      "aid2": 9,
+      "order": 1
+    },
+    {
+      "aid1": 6,
+      "aid2": 11,
+      "order": 1
+    },
+    {
+      "aid1": 7,
+      "aid2": 12,
+      "order": 1
+    }
+  ]
+}

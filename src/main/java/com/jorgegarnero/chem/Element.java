@@ -1,5 +1,10 @@
 package com.jorgegarnero.chem ;
 
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Optional;
+
 /**
  * Chemical Elements.
  *
@@ -164,4 +169,22 @@ public enum Element {
         }
         return VALUES[atomicNumber - 1] ;
     }
+
+    private static final Map<String, Element> BY_LOOKUP = new HashMap<> () ;
+
+    static {
+        for (Element element : values ()) {
+            BY_LOOKUP.put (element.symbol.toLowerCase (Locale.ROOT), element) ;
+            BY_LOOKUP.put (element.name.toLowerCase (Locale.ROOT), element) ;
+            BY_LOOKUP.put (element.name ().toLowerCase (Locale.ROOT), element) ;
+        }
+    }
+
+    public static Optional<Element> fromSymbol (String symbol) {
+        if (symbol == null || symbol.isBlank ()) {
+            return Optional.empty () ;
+        }
+        return Optional.ofNullable (BY_LOOKUP.get (symbol.trim ().toLowerCase (Locale.ROOT))) ;
+    }
+
 }

@@ -110,24 +110,21 @@ public class Molecule {
     //-------------------------------------------------------------------------------------------------------
     //-------------------------------------------------------------------------------------------------------
 
-    public Atom getFromAtom (Bond bond) {
-        int atomId = bond.getFromAtom () ;
+    public Atom getAtomById (int id) {
         for (Atom atom : atoms) {
-            if (atom.getId () == atomId)
+            if (atom.getId () == id) {
                 return atom ;
+            }
         }
         return null ;
+    }
+    public Atom getFromAtom (Bond bond) {
+        return getAtomById (bond.getFromAtom ()) ;
     }
 
     public Atom getToAtom (Bond bond) {
-        int atomId = bond.getToAtom () ;
-        for (Atom atom : atoms) {
-            if (atom.getId () == atomId)
-                return atom ;
-        }
-        return null ;
+        return getAtomById (bond.getToAtom ()) ;
     }
-
 
     //-------------------------------------------------------------------------------------------------------
     //-------------------------------------------------------------------------------------------------------
