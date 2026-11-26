@@ -1,19 +1,28 @@
 package com.jorgegarnero.chem.pubchem.loader ;
 
+/*
+ * Copyright (C) 2026 Jorge Julio Garnero
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ */
+
 import com.fasterxml.jackson.databind.JsonNode ;
 import com.fasterxml.jackson.databind.ObjectMapper ;
-import com.jorgegarnero.chem.Atom;
-import com.jorgegarnero.chem.Bond;
-import com.jorgegarnero.chem.Element;
+import com.jorgegarnero.chem.Atom ;
+import com.jorgegarnero.chem.Bond ;
+import com.jorgegarnero.chem.Element ;
 import com.jorgegarnero.chem.Molecule ;
-import com.jorgegarnero.chem.Point;
+import com.jorgegarnero.chem.Point ;
 
 import java.io.IOException ;
 import java.io.InputStream ;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.ArrayList ;
+import java.util.HashSet ;
+import java.util.List ;
+import java.util.Set ;
 
 public class PubChemLoader {
 
@@ -102,10 +111,10 @@ public class PubChemLoader {
             bonds.add (theNewBond) ;
 
             Atom atom1 = molecule.getAtomById (aid1) ;
-            atom1.addBond (theNewBond);
+            atom1.addBond (theNewBond) ;
 
             Atom atom2 = molecule.getAtomById (aid2) ;
-            atom2.addBond (theNewBond);
+            atom2.addBond (theNewBond) ;
 
         }
 

@@ -6,6 +6,10 @@ Base module for **Hydrocarbons-02**, a modular project designed to process molec
 - **Java 25 (LTS)**
 - **Maven 3.9.9**
 
+## License
+
+This project is licensed under the **GNU General Public License v3.0 (GPLv3)**. See the [LICENSE](LICENSE) file for the full text.
+
 ## Getting Started
 
 ### Prerequisites
